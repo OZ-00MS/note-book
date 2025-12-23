@@ -1,0 +1,222 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f5f7;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1c1c1e;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.header-buttons button:first-child {
+  background-color: #007aff;
+  color: white;
+}
+
+.header-buttons button:first-child:hover {
+  background-color: #005bb5;
+}
+
+.header-buttons button:last-child {
+  background-color: #e5e5ea;
+  color: #1c1c1e;
+}
+
+.header-buttons button:last-child:hover {
+  background-color: #d1d1d6;
+}
+
+/* Search input */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d6;
+  font-size: 16px;
+}
+
+/* New note form */
+.new-note-form {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.new-note-form input,
+.new-note-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d6;
+  font-size: 16px;
+}
+
+.new-note-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-buttons button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-buttons button:first-child {
+  background-color: #e5e5ea;
+  color: #1c1c1e;
+}
+
+.form-buttons button:first-child:hover {
+  background-color: #d1d1d6;
+}
+
+.form-buttons button:last-child {
+  background-color: #007aff;
+  color: white;
+}
+
+.form-buttons button:last-child:hover {
+  background-color: #005bb5;
+}
+#emptyStateNewNoteBtn{
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #007aff;
+  color: white;
+  margin-top: 10px;
+}
+/* Notes container */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Note card */
+.note-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.note-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.note-content-text {
+  font-size: 14px;
+  color: #4b5563;
+  white-space: pre-wrap;
+}
+
+/* Note actions */
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  gap: 6px;
+}
+
+.note-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.note-actions .edit {
+  color: #007aff;
+}
+
+.note-actions .edit:hover {
+  background: rgba(0,122,255,0.1);
+}
+
+.note-actions .delete {
+  color: #dc2626;
+}
+
+.note-actions .delete:hover {
+  background: rgba(220,38,38,0.1);
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.empty-state img {
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mac-Style Notes App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>My Notes</h1>
+      <div class="header-buttons">
+        <button id="newNoteBtn">New Note</button>
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <!-- Search input -->
+    <div id="searchContainer" class="hidden search-container">
+      <input type="text" id="searchInput" placeholder="Search notes...">
+    </div>
+
+    <!-- New note form -->
+    <div id="newNoteForm" class="hidden new-note-form">
+      <input type="text" id="noteTitle" placeholder="Note title">
+      <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+      <div class="form-buttons">
+        <button id="cancelBtn">Cancel</button>
+        <button id="saveBtn">Save Note</button>
+      </div>
+    </div>
+
+    <!-- Notes container -->
+    <div id="notesContainer" class="notes-container"></div>
+
+    <!-- Empty state -->
+    <div id="emptyState" class="empty-state hidden">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/de9b1052-5fdc-4277-952b-a3719c89dfc3.png" alt="Note book">
+      <h2>No notes yet</h2>
+      <p>Start by creating your first note</p>
+      <button id="emptyStateNewNoteBtn">Create your first note</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
